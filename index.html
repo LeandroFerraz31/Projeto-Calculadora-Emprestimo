@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;500&family=Roboto:wght@300;700&display=swap"
+    rel="stylesheet" />
+
+</head>
+<title>JavaScript Loan Calculator</title>
+
+<body>
+  <!--
+        esta e uma tabela de HTML com elemento <input> que permiotem ao usuario inserir dados e elementos <span> nos quais o programa exibir seus resusltados. Esses elementos têm indentificações com Interest e years. Essa indentificações são usadas no código JavaScript que vem apos a tabela. note que alguns dos elementos de entrada definem rotinas de tratamentos de evento onchange ou onclick. Elas especificam stringde código javaScript a ser executado quando o usuario insere dados ou dá um clique
+    -->
+
+   
+
+  <div class="card">
+    <table id="container">
+  </div>
+  <tr >
+    <h1>Loan Calculator</h1>
+    <th class="loan">Enter Loan Data:</th>
+    <td></td>
+    <th ><p> Loan Balance, Cumulative Equity, and Interest Payments</p></th>
+
+  </tr>
+
+  <tr>
+    <td>Amount of the loan (R$):</td>
+    <td><input id="amount" onchange="calculate();" /></td>
+    <td rowspan="8">
+      <canvas id="graph"> </canvas>
+    </td>
+  </tr>
+  <tr>
+    <td>Annual interest (%):</td>
+    <td><input id="apr" onchange="calculate();" /></td>
+  </tr>
+  <tr>
+    <td>Repayment period (years):</td>
+    <td><input id="years" onchange="calculate();" /></td>
+  </tr>
+
+  <tr>
+    <td>Zipcode (to find lenders):</td>
+    <td><input id="zipcode" onchange="calculate();" /></td>
+  </tr>
+
+  <tr>
+    <th>Approximate Payments:</th>
+    <td><button class="calc" onclick="calculate();">Calculate</button></td>
+  </tr>
+  <tr>
+    
+      <td>Monthly payment:</td>
+      <td>R$<span class="output" id="payment"></span></td>
+  </tr>
+  <tr>
+    <td>Total payment:</td>
+    <td>R$<span class="output" id="total"></span></td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td>Total interest:</td>
+    <td>R$<span class="output" id="totalinterest"></span></td>
+    
+  </tr>
+  <tr>
+    
+    <th> <p class="rodape"> Sponsors:</p></th>
+    <td colspan="2">
+     <p class="rodape"> Apply for your loan with one of these fine lenders:</p>
+    
+      <div id="lenders"></div>
+    </td>
+
+  </tr>
+
+  </table>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
