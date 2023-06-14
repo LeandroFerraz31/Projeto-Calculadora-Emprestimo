@@ -1,3 +1,4 @@
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -5,64 +6,51 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
+/* Estilos para o contêiner */
 #container {
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
-    z-index: 2;
     align-content: space-around;
-
 }
 
+/* Estilos para o título h1 */
 h1 {
-    max-width: 100%;
     color: rgb(255, 255, 255);
     font-size: 50px;
-    position: absolute;
     margin-top: 30px;
     transform: translate(300px);
 }
 
-p {
+/* Estilos para elementos de parágrafo (p) */
+p, .loan {
     color: rgb(255, 255, 255);
     padding-bottom: 20px;
     margin-left: 58px;
 }
 
-.loan {
-    color: rgb(255, 255, 255);
-    padding-bottom: 20px;
-    margin-left: 58px;
-}
-
+/* Estilos para o elemento com ID "graph" */
 #graph {
     background: rgb(255, 255, 255);
     background: linear-gradient(73deg, rgba(255, 255, 255, 0.6671043417366946) 0%, rgba(78, 140, 41, 0.8743872549019608) 46%);
-   
     margin-left: 70px;
     width: 400px;
     height: 250px;
     border: solid black 1.5px;
     border-radius: 3px;
-
 }
 
-/* Esta é uma folha de estilos CSS: ela adiciona estilo na saída do programa */
+/* Estilos para a classe "output" */
 .output {
-
     font-weight: bold;
     padding-left: 12px;
 }
 
-/* Valores calculados em negrito */
+/* Estilos para o elemento com ID "payment" */
 #payment {
     text-decoration: underline;
 }
 
-/* Para elemento com id="payment" */
-
-
+/* Estilos para o elemento com a classe "card" */
 .card {
     background: rgb(255, 255, 255);
     background: linear-gradient(73deg, rgba(255, 255, 255, 0.6671043417366946) 0%, rgba(78, 140, 41, 0.8743872549019608) 46%);
@@ -73,37 +61,17 @@ p {
     height: 90%;
     width: 70%;
     border-radius: 20px;
-    z-index: 1;
     transform: translate(-250px);
 }
 
-#amount {
-
+/* Estilos para elementos de entrada */
+#amount, #apr, #years, #zipcode {
     max-width: 100%;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#apr {
-
-    max-width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#years {
-    max-width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#zipcode {
-
-    max-width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+/* Estilos para o botão */
 button.calc {
     background-color: white;
     max-width: 100%;
@@ -117,6 +85,48 @@ button.calc:hover {
     color: white;
 }
 
+/* Estilos para o rodapé */
 p.rodape {
     margin-top: 50px;
+}
+
+/* Media queries para dispositivos móveis e tablets */
+@media screen and (max-width: 768px) {
+    /* Estilos para telas menores que 768px */
+    #container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vh;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 10px;
+        transform: translate(0);
+    }
+
+    p, .loan {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #graph {
+        margin: 0;
+        width: 100%;
+    }
+
+    .card {
+        position: relative;
+        margin-top: 20px;
+        transform: translate(0);
+        width: 90%;
+    }
+}
+
+/* Media queries para telas maiores que 768px (desktops e laptops) */
+@media screen and (min-width: 769px) {
+    /* Estilos para telas maiores que 768px */
+    #container {
+        margin-top: 20vh;
+    }
 }

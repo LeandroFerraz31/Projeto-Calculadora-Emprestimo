@@ -1,4 +1,4 @@
-/* * Este script define a função calculate() chamada pelas rotinas de tratamento de evento * no código HTML acima. A função lê valores de elementos <input>, calcula * as informações de pagamento de empréstimo, exibe o resultado em elementos <span>. * Também salva os dados do usuário, exibe links para financeiras e desenha um gráfico. */
+// Este script define a função calculate() chamada pelas rotinas de tratamento de evento * no código HTML acima. A função lê valores de elementos <input>, calcula * as informações de pagamento de empréstimo, exibe o resultado em elementos <span>. * Também salva os dados do usuário, exibe links para financeiras e desenha um gráfico. 
 
 function calculate() {
   /*Pesquisa os elementos de entrada e saída no documento*/
